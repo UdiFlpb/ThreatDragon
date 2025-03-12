@@ -1,0 +1,27 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Online Banking Application Threat Model",
+    "owner": "Ehud Orenstain",
+    "description": "Online Baning application threat model ",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Banking Application Threat model",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [],
+        "description": "Online Baning application threat modeling"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Cybersecurity architect",
+    "threatTop": 0
+  }
+}
