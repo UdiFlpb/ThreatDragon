@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "cc2862ca-bd41-46e4-8254-4d0a3dd95df1",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "App Developer",
@@ -147,13 +147,14 @@
                 "text": "Customer"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -237,20 +238,19 @@
               ]
             },
             "id": "5693b481-4433-479b-9355-7a562b3bbaa1",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
               "description": "A costumer using the app",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "97c40947-25dd-493d-9c3d-3753a858abf8",
                   "title": "MITM attack",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Man in the middle attack where an attacker is able to capture all of the data the user is sending and receiving and pretend to be the user towards the website/pretend to be the website towards the user",
@@ -262,7 +262,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -288,6 +288,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -371,7 +372,6 @@
               ]
             },
             "id": "80c8da01-619f-4823-bdb1-7fc88569ec70",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Teller",
@@ -397,13 +397,14 @@
                 "text": "Webpages"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -487,14 +488,13 @@
               ]
             },
             "id": "e856784b-b5e9-4ed0-b75e-5550f0570a07",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Webpages",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -503,7 +503,7 @@
                 {
                   "id": "f929e73b-dd33-43e9-9a4d-2bc945f94bef",
                   "title": "DOS attack on the webpages loading process",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Overloading the webpage loading process with many HTTP requests.\nBy doing so the process crashes and the webpages are not loading/available.",
@@ -516,7 +516,7 @@
                 {
                   "id": "42aa7d15-083d-4558-ac4e-b02d70bf1d14",
                   "title": "Coding the webpage without proper privileages",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Elevation of privilege",
                   "description": "An attacker sends a request to up[date the code of the webpage",
@@ -532,8 +532,8 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
-                "elevationOfPrivilege": 1
+                "denialOfService": 4,
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -551,13 +551,14 @@
                 "text": "Login"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -641,14 +642,13 @@
               ]
             },
             "id": "4703171a-4243-4f1f-ab90-d38daa071d29",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Login",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -657,7 +657,7 @@
                 {
                   "id": "9ab67cb0-b919-4964-9fd2-5cb812182480",
                   "title": "DOS attack on the login process",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Overloading the Login process with many requests.\nBy doing so the process crashes and the and users are not able to login to the app.",
@@ -670,7 +670,7 @@
                 {
                   "id": "0f27d2c3-0377-4ad1-92ce-98514e802323",
                   "title": "BOF attack",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Attacker send a special query which exploits a BOF volnuerability in the Login process which parses the query details ",
@@ -683,7 +683,7 @@
                 {
                   "id": "a313e236-7c96-4284-b47a-de3e84ef357a",
                   "title": "SQL injection",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Elevation of privilege",
                   "description": "Attacker sends a special query which exploits a SQL injection attack  and provides him elevated privileges/Allows him to lign as a different user.",
@@ -696,11 +696,11 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
-                "elevationOfPrivilege": 1
+                "denialOfService": 4,
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -718,13 +718,14 @@
                 "text": "Transaction"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -808,14 +809,13 @@
               ]
             },
             "id": "bd0703b5-d59f-4cec-a85c-7cbd85f53ffe",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Transaction",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -824,7 +824,7 @@
                 {
                   "id": "4ab82924-7e2a-4bf7-aba5-52ac8c52d915",
                   "title": "DOS attack on the transaction process",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Overloading the transaction process with many requests.\nBy doing so the process crashes and the uisers/tellers are not able to perform new transactions.",
@@ -837,7 +837,7 @@
                 {
                   "id": "bedb5476-bc24-4bf9-b750-593a219d27c0",
                   "title": "Spoofing the identity of the requester",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Critical",
                   "type": "Spoofing",
                   "description": "Attacker creates new transaction from a victim account to his account",
@@ -849,13 +849,20 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 4,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1702,6 +1709,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1785,7 +1793,6 @@
               ]
             },
             "id": "a305f7ff-fede-455c-aa37-fc4d5084e679",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Public webpages",
@@ -1822,6 +1829,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1905,7 +1913,6 @@
               ]
             },
             "id": "74cc2955-1e0d-47e2-bce1-68337eef8087",
-            "zIndex": 13,
             "data": {
               "type": "tm.Store",
               "name": "Store",
@@ -1919,15 +1926,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1944,18 +1942,17 @@
                 "text": "Login database"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -2039,14 +2036,13 @@
               ]
             },
             "id": "9085aeb8-4357-4a3e-a8c4-7fcf9affb8b8",
-            "zIndex": 14,
             "data": {
               "type": "tm.Store",
               "name": "Login database",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -2056,7 +2052,7 @@
                 {
                   "id": "f6c849e9-8890-4fb3-b4a7-ef51fc4d65cc",
                   "title": "SQL injection",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Incoming requests which triggers the DB to output all records",
@@ -2070,7 +2066,7 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 1
               }
             }
